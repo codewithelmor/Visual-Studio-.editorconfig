@@ -761,3 +761,28 @@ dotnet_naming_style.prefix_t_style.capitalization = pascal_case
 [{*.designer.cs,*.generated.cs,*_generated.cs,*.g.cs,*.g.i.cs}]
 generated_code = true
 dotnet_diagnostic.severity = none
+
+
+###############################################################################
+# SECTION: Global Usings Analyzer settings
+###############################################################################
+
+# Global Usings Analyzer (BdSoftware.GlobalUsingsAnalyzer)
+# https://marketplace.visualstudio.com/items?itemName=BdSoftware.GlobalUsingsAnalyzer
+# Suggests moving usings to a single global-usings file (defaults to GlobalUsings.cs).
+# Diagnostics must be placed under the [*.cs] entry to work.
+[*.cs]
+
+# GlobalUsingsAnalyzer0001
+# Changes the target filename for global usings (default: GlobalUsings.cs).
+dotnet_diagnostic.GlobalUsingsAnalyzer0001.filename = GlobalUsings.cs
+
+# GlobalUsingsAnalyzer0002
+# Enables/disables the analyzer for this project/solution.
+# Possible values: true, false
+dotnet_diagnostic.GlobalUsingsAnalyzer0002.enabled = true
+
+# GlobalUsingsAnalyzer0003
+# Sets the diagnostic severity.
+# Possible values: info, warning, error, hidden
+dotnet_diagnostic.GlobalUsingsAnalyzer0003.severity = suggestion
